@@ -6,7 +6,6 @@ from bareunpy import Tokenizer
 
 # 프로젝트 루트에 있는 .env 파일 로드
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '..', '.env'))
-# 환경변수에서 API 키 가져오기
 BAREUN_API_KEY = os.getenv('BAREUN_API_KEY')
 SERVER_HOST=os.getenv('SERVER_HOST')
 SERVER_PORT=os.getenv('SERVER_PORT')
