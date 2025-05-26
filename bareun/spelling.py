@@ -5,9 +5,13 @@ from dotenv import load_dotenv
 # .env에서 API 키 로드
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '..', '.env'))
 BAREUN_API_KEY = os.getenv('BAREUN_API_KEY')
+SERVER_HOST=os.getenv('SERVER_HOST')
+SERVER_PORT=os.getenv('SERVER_PORT')
 
-# Corrector 인스턴스 초기화
-corrector = Corrector(BAREUN_API_KEY, 'localhost', 5757)
+
+# If you have your own localhost bareun.
+corrector=Corrector(BAREUN_API_KEY, SERVER_HOST, SERVER_PORT)
+
 
 # -----------------------------
 # 1. 단일 문장 교정

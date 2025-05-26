@@ -8,9 +8,12 @@ from bareunpy import Tagger
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '..', '.env'))
 # 환경변수에서 API 키 가져오기
 BAREUN_API_KEY = os.getenv('BAREUN_API_KEY')
+SERVER_HOST=os.getenv('SERVER_HOST')
+SERVER_PORT=os.getenv('SERVER_PORT')
+
 
 # If you have your own localhost bareun.
-tagger = Tagger(BAREUN_API_KEY, 'localhost', 5757)
+tagger=Tagger(BAREUN_API_KEY, SERVER_HOST, SERVER_PORT)
 
 # or if you have your own bareun which is running on 10.8.3.211:15656.
 # my_tagger = Tagger(BAREUN_API_KEY, '10.8.3.211', 15656)
